@@ -3,6 +3,7 @@ from django.db import models
 
 
 class Project(models.Model):
+    id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=50)
     description = models.TextField()
     photo = models.ImageField(upload_to="app/images/")
